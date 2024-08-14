@@ -1,0 +1,20 @@
+---
+install_packages:
+  - 'vim'
+  - 'tmux'
+  - 'git'
+  - 'wget'
+  - 'curl'
+  - 'fapolicyd'
+  - 'fapolicyd-selinux'
+  - 'tuned'
+  - 'clamav'
+  - 'clamav-data'
+  - 'clamav-filesystem'
+  - 'clamav-freshclam'
+  - 'clamav-lib'
+  - 'nmstate'
+
+uninstall_packages:
+  - 'telnet'
+  - 'cockpit'

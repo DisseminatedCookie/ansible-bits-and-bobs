@@ -1,0 +1,12 @@
+---
+- name: 'configuration | default packages | install packages'
+  ansible.builtin.package:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ install_packages }}"
+
+- name: 'configuration | default packages | uninstall packages'
+  ansible.builtin.package:
+    name: "{{ item }}"
+    state: absent
+  with_items: "{{ uninstall_packages }}"
