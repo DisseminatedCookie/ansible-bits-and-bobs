@@ -1,0 +1,18 @@
+---
+nmstate_config_path: '/etc/nmstate'
+dns_resolver_server_1: ''
+dns_resolver_server_2: ''
+routes_destination: '0.0.0.0/0'
+routes_next_hop_interface: "{{ interface_1_name }}"
+routes_next_hop_address: ''
+interface_1_name: ''
+interface_1_type: ''
+interface_1_driver: ''
+interface_1_state: 'up'
+interface_1_mac_address: ''
+interface_1_permanent_mac_address: "{{ interface_1_mac_address }}"
+interface_1_ipv4_enabled: true
+interface_1_ipv4_dhcp: false
+interface_1_ipv4_ip_address: ''
+interface_1_ipv4_prefix_lenght: ''
+interface_1_ipv6_enabled: false

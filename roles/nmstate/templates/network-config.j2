@@ -1,0 +1,37 @@
+---
+hostname:
+  running: {{ ansible_facts.fqdn }}
+  config: {{ ansible_facts.fqdn }}
+dns-resolver:
+  running:
+    server:
+    - {{ dns_resolver_server_1 }}
+    - {{ dns_resolver_server_2 }}
+  config:
+    server:
+    - {{ dns_resolver_server_1 }}
+    - {{ dns_resolver_server_2 }}
+routes:
+  running:
+  - destination: {{ routes_destination }}
+    next-hop-interface: {{ routes_next_hop_interface }}
+    next-hop-address: {{ routes_next_hop_address }}
+  config:
+  - destination: {{ routes_destination }}
+    next-hop-interface: {{ routes_next_hop_interface }}
+    next-hop-address: {{ routes_next_hop_address }}
+interfaces:
+- name: {{ interface_1_name }}
+  type: {{ interface_1_type }}
+  driver: {{ interface_1_driver }}
+  state: {{ interface_1_state }}
+  mac-address: {{ interface_1_mac_address }}
+  permanent-mac-address: {{ interface_1_permanent_mac_address }}
+  ipv4:
+    enabled: {{ interface_1_ipv4_enabled | string | lower }}
+    dhcp: {{ interface_1_ipv4_dhcp | string | lower }}
+    address:
+    - ip: {{ interface_1_ipv4_ip_address }}
+      prefix-length: {{ interface_1_ipv4_prefix_lenght }}
+  ipv6:
+    enabled: {{ interface_1_ipv6_enabled | string | lower }}
